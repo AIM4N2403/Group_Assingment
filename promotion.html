@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background:#04025f;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header .logo {
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+        header .contact-info, header .social-icons {
+            display: flex;
+            align-items: center;
+        }
+        header .contact-info span, header .social-icons a {
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            position: relative;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .promo-banner {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            overflow: hidden;
+        }
+
+        .promo-banner video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: Auto;
+            height: Auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+
+        .promo-banner a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff6347;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            z-index: 1;
+        }
+
+        .promo-products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .promo-product {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px;
+            flex: 1 1 30%;
+            max-width: 30%;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .promo-product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .promo-product h3 {
+            padding: 15px 0;
+            font-size: 1.5rem;
+        }
+
+        .promo-product p {
+            padding: 0 15px 15px;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        footer {
+            background: #04025f;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            TechHḁven
+        </div>
+        <div class="contact-info">
+            <span>📞+6011-6368-6713</span>
+            <span>&#128231 techhaven1@gmail.com</span>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="aboutus.html">About Us &#9662;</a>
+            <div class="dropdown-content">
+                <a href="aboutus.html">Us</a>
+                <a href="history.html">History</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="javascript:void(0)">Products &#9662;</a>
+            <div class="dropdown-content">
+                <a href="newrelease.html">New Releases</a>
+                <a href="laptop.html">Laptops</a>
+                <a href="phone.html">Phones</a>
+                <a href="fan.html">Fans</a>
+                <a href="toprated.html">Top Rated</a>
+                <a href="others.html">Others</a>
+            </div>
+        </div>
+        <a href="promotion.html">Super Deals</a>
+        <a href="member.html">Staff in Charge</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact us</a>
+    </nav> 
+    <div class="hero">
+</nav>
+    <section class="promo-banner">
+        <video autoplay muted loop>
+            <source src="image/h.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <a href="newrelease.html">Shop Now</a>
+    </section>
+    <section class="promo-products">
+        <div class="promo-product">
+            <img src="image/phoneiphone.jpg" alt="Product 1">
+            <h3>iPhone Mania</h3>
+            <p>Need an earphone? 
+               Buy the iPhone 15 Pro Max with Airpods for only RM 4,999.00.
+               You don't have to spend more money on earphones instead get an upgrade and change to iPhone X Airpods.
+               Grab yours now before the deal ends!</p>
+        </div>
+        <div class="promo-product">
+            <img src="image/game.jpg" alt="Product 2">
+            <h3>Gaming Fever</h3>
+            <p>Are you a true gamer?
+               Grab Asus Tuf Gaming with an Xbox controller for only RM 5,399.00.
+               Don't miss the deal!</p>
+        </div>
+        <div class="promo-product">
+            <img src="image/home.jpg" alt="Product 3">
+            <h3>Hot House</h3>
+            <p>Get a hot house deal with only RM 699.00. You will get a kettle, iron and a portable fan. For a limited time only! </p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 TechHḁven. All rights reserved.</p>
+    </footer>
+</body>
+</html>

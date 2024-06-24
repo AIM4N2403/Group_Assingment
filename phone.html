@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background:#04025f;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header .logo {
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+        header .contact-info, header .social-icons {
+            display: flex;
+            align-items: center;
+        }
+        header .contact-info span, header .social-icons a {
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 60px;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .centered-container {
+            justify-content: center;
+        }
+
+        .product-container {
+            width: 30%; 
+            margin-bottom: 20px;
+	        margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .product-container:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .product-image {
+            width: 380px;
+            height: 500px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: transform 0.2s ease-in-out; 
+        }
+
+        .product-image:hover {
+            transform: translate(0, -10px); 
+          }
+        
+        .product-details {
+            margin-top: 20px;
+        }
+        
+        .product-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .product-description {
+            font-size: 16px;
+            color: #999;
+        }
+        .checked {
+            color: orange;
+          }
+        footer {
+            background: #04025f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            TechHḁven
+        </div>
+        <div class="contact-info">
+            <span>📞+6011-6368-6713</span>
+            <span>&#128231 techhaven1@gmail.com</span>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="aboutus.html">About Us &#9662;</a>
+            <div class="dropdown-content">
+                <a href="aboutus.html">Us</a>
+                <a href="history.html">History</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="javascript:void(0)">Products &#9662;</a>
+            <div class="dropdown-content">
+                <a href="newrelease.html">New Releases</a>
+                <a href="laptop.html">Laptops</a>
+                <a href="phone.html">Phones</a>
+                <a href="fan.html">Fans</a>
+                <a href="toprated.html">Top Rated</a>
+                <a href="others.html">Others</a>
+            </div>
+        </div>
+        <a href="promotion.html">Super Deals</a>
+        <a href="member.html">Staff in Charge</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact us</a>
+    </nav> 
+    <h2 style="text-align: center; font-size: 50px; font-family: 'Mouse Memoirs'; color: #031273; padding-top: 30px;">Android  <i class="fa fa-android"></i></h2>
+    <p style="text-align: center; font-size: 20px; color: black; margin-top: 1px;">Unlock your world. Your phone, your way.</p>
+    <div class="products-container centered-container">
+        <div class="product-container">
+            <img src="image/infinix40.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Infinix Note 40-Pro</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 1,599.00</p>
+                <p class="product-description">70W All-Round FastCharge2.0 + 20W Wireless MagCharge, 108MP OIS Super-Zoom Cam,Dual Speakers with Sound by JBL, 3D-Curved 120Hz AMOLED Display | In-Display Fingerprint, Helio G99 Ultimate + Up to 24GB Extended RAM.</p>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <img src="image/infinixnote12.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Infinix Note 12</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 799.00</p>
+                <p class="product-description">Helio G99 6nm High Performance Monster Engine, Up To 13GB Extended RAM 8GB+5GB, 50MP Ultra Night Triple Camera, 6.7" FHD+ True Color AMOLED Display, 33W Fast Charge with 5000mAh Battery, 7.8mm Ultra Sleek Design.</p>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <img src="image/redmi.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Redmi 9T</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 1,044.00</p>
+                <p class="product-description">6.53” FHD+ Dot Drop display, CPU: Qualcomm® Kryo™ 260, 11nm manufacturing process, octa-core CPU, up to 2.0GHz, GPU: Qualcomm® Adreno™ 610 GPU, AI: 3rd gen Qualcomm® AI Engine, 6000mAh (typ) high-capacity battery, USB-C, Supports 18W fast charging, Side fingerprint senso, AI Face Unlock, Dual SIM + dedicated microSD, Expandable storage up to 512GB.</p>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <img src="image/realme.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Realme 12 5G</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 1,099.00</p>
+                <p class="product-description">MediaTek Dimensity 6100+ 5G Chipset, CPU: 6nm Process, Octa-core, Up to 2.2GHz, GPU: ARM G57 MC2, 8GB + 512GB Maximum Option, RAM: 8GBLPDDR4X, ROM: 256GB/512GB, Up to 8GB+8GB Dynamic RAM, 950nits FHD+ Sunlight Display, 5000mAh (typ) Massive Battery, 45W SUPERVOOC Charge, 4880mAh(min) Battery Capacity, Includes an 45W Charging Adapter, USB Type-C Port, 5G + 5G Dual Mode, SA/NSA Supported.</p>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <img src="image/samsung.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Samsung Galaxy A73 5G</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 1,999.00</p>
+                <p class="product-description">CPU Speed: 2.4GHz, 1.8GHz, CPU Type: Octa-Core, Resolution (Main Display): 1080 x 2400 (FHD+), Technology (Main Display): Super AMOLED Plus, Number of SIM: Dual-SIM, Accelerometer, Fingerprint Sensor, Gyro Sensor, Geomagnetic Sensor, Light Sensor, Proximity Sensor, USB Type-C.</p>
+            </div>
+        </div>
+
+    </div>
+    <h2 style="text-align: center; font-size: 50px; font-family: 'Mouse Memoirs'; color: #031273;">Apple Products <i class="fa fa-apple"></i></h2>
+    <p style="text-align: center; font-size: 20px; color: black; margin-top: 1px;">Think Different.</p>
+    <div class="products-container">
+        <div class="product-container">
+            <img src="image/airpod.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">AirPods</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 789.00</p>
+                <p class="product-description">Dual beamforming microphones, Dual optical sensors, Motion-detecting accelerometer, Speech-detecting accelerometer, H1 headphone chip, Double-tap to play, skip forwards or answer a phone call.</p>
+            </div>
+        </div>
+    
+        <div class="product-container">
+            <img src="image/iphone15.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">iPhone 15 Pro Max</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p class="product-price">RM 5,999.00</p>
+                <p class="product-description">48MP Main12MP Ultra Wide12MP 5x Telephoto, Super Retina XDR with ProMotion Always-On display, Dual SIM (nano-SIM and eSIM), A17 Pro chip, 6-core CPU, 6-core GPU.</p>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <img src="image/ipadpro.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">iPad Gen.9</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 1,359.00</p>
+                <p class="product-description">Gorgeous 10.2-inch Retina display with True Tone, A13 Bionic chip with Neural Engine, 8MP Wide back camera, 12MP Ultra Wide front camera with Centre Stage, Up to 256GB storage, Stereo speakers, Touch ID for secure authentication, 802.11ac Wi-Fi and LTE2, Up to 10 hours of battery life, Lightning connector for charging and accessories, Works with Apple Pencil (1st generation) and Smart Keyboard1.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 TechHḁven. All rights reserved.</p>
+    </footer>
+</body>
+</html>

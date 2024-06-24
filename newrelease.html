@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Release</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+        header {
+            background:#04025f;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header .logo {
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+        header .contact-info, header .social-icons {
+            display: flex;
+            align-items: center;
+        }
+        header .contact-info span, header .social-icons a {
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 60px;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        
+        .product-container {
+            width: 30%; 
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .product-container:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+        }
+        
+        .product-image {
+            width: 375px;
+            height: 300px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: transform 0.2s ease-in-out; 
+        }
+
+        .product-image:hover {
+            transform: translate(0, -10px); 
+        
+        }
+        
+        .product-details {
+            margin-top: 20px;
+        }
+        
+        .product-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .product-description {
+            font-size: 16px;
+            color: #999;
+        }
+        .checked {
+            color: orange;
+          }
+        footer {
+            background: #04025f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            TechHḁven
+        </div>
+        <div class="contact-info">
+            <span>📞+6011-6368-6713</span>
+            <span>&#128231 techhaven1@gmail.com</span>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="aboutus.html">About Us &#9662;</a>
+            <div class="dropdown-content">
+                <a href="aboutus.html">Us</a>
+                <a href="history.html">History</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="javascript:void(0)">Products &#9662;</a>
+            <div class="dropdown-content">
+                <a href="newrelease.html">New Releases</a>
+                <a href="laptop.html">Laptops</a>
+                <a href="phone.html">Phones</a>
+                <a href="fan.html">Fans</a>
+                <a href="toprated.html">Top Rated</a>
+                <a href="others.html">Others</a>
+            </div>
+        </div>
+        <a href="promotion.html">Super Deals</a>
+        <a href="member.html">Staff in Charge</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact us</a>
+    </nav>    
+    <div class="products-container">
+        <div class="product-container">
+            <img src="image/phoneiphone.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">iPhone Mania</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 4,999.00</p>
+                <p class="product-description">Need an earphone? 
+                    Buy the iPhone 15 Pro Max with Airpods for only RM 4,999.00.
+                    You don't have to spend more money on earphones instead get an upgrade and change to iPhone.
+                    Grab yours now before the deal ends!</p>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <img src="image/game.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Gaming Fever</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p class="product-price">RM 5,399.00</p>
+                <p class="product-description">Are you a true gamer?
+                    Grab Asus Tuf Gaming with an Xbox controller for only RM 5,399.00.
+                    Don't miss the deal!</p>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <img src="image/home.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Hot House</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 699.00</p>
+                <p class="product-description">Get a hot house deal with only RM 699.00. You will get a kettle, iron and a portable fan. For a limited time only!</p>
+            </div>
+        </div>
+
+        <div id="bottom" class="product-container">
+            <img src="image/white.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">XBox Controller</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 159.00</p>
+                <p class="product-description">Take your gaming to the next step. Connect to Xbox consoles with Xbox Wireless. Wirelessly connect to Windows 10/11 PCs, tablets, iOS and Android using Bluetooth, Compatible With
+                    Xbox Series X, Xbox Series S, Xbox One, Windows 10/11, Android and iOS and AA batteries for up to 40 hours of battery life.</p>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <img src="image/powderblue.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Pen-Drive</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 32.00</p>
+                <p class="product-description">With storage of 32GB, you could easily carry everywhere without need a larger space.</p>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <img src="image/blue.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Samsung Powerbank</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 229.00</p>
+                <p class="product-description">With battery Capacity 10,000 mAh. You could persue Super Fast Charge, PD 3.0 PDO/PPS with max of 25 W.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 TechHḁven. All rights reserved.</p>
+    </footer>
+</body>
+</html>

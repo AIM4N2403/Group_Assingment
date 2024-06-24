@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background:#04025f;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header .logo {
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+        header .contact-info, header .social-icons {
+            display: flex;
+            align-items: center;
+        }
+        header .contact-info span, header .social-icons a {
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 60px;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        
+        .product-container {
+            width: 30%; 
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .product-container.special-color {
+            background-color: #feede2; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        .product-container:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: transform 0.2s ease-in-out; 
+        }
+
+        .product-image:hover {
+            transform: translate(0, -10px); 
+          }
+        
+        .product-details {
+            margin-top: 20px;
+        }
+        
+        .product-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .product-description {
+            font-size: 16px;
+            color: #999;
+            text-align: justify;
+        }
+        .checked {
+            color: orange;
+          }
+        footer {
+            background: #04025f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            TechHḁven
+        </div>
+        <div class="contact-info">
+            <span>📞+6011-6368-6713</span>
+            <span>&#128231 techhaven1@gmail.com</span>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="aboutus.html">About Us &#9662;</a>
+            <div class="dropdown-content">
+                <a href="aboutus.html">Us</a>
+                <a href="history.html">History</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="javascript:void(0)">Products &#9662;</a>
+            <div class="dropdown-content">
+                <a href="newrelease.html">New Releases</a>
+                <a href="laptop.html">Laptops</a>
+                <a href="phone.html">Phones</a>
+                <a href="fan.html">Fans</a>
+                <a href="toprated.html">Top Rated</a>
+                <a href="others.html">Others</a>
+            </div>
+        </div>
+        <a href="promotion.html">Super Deals</a>
+        <a href="member.html">Staff in Charge</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact us</a>
+    </nav> 
+    <h2 style="text-align: center; font-size: 50px; font-family: 'Mouse Memoirs'; color: #031273; padding-top: 30px;">Gaming Laptop</h2>
+    <p style="text-align: center; font-size: 14px; color: black; margin-top: 1px;">Experience gaming excellence.</p>
+    <div class="products-container">
+        <div class="product-container">
+            <img src="image/laptop1.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Acer Nitro 5</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 3000</p>
+                <p class="product-description">The Acer Nitro 5 is a powerful and versatile gaming laptop built to dominate the battlefield. Whether you choose the AMD Ryzen™ 6000 Series or the 12th Gen Intel® Core™ i7 processor,</p>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <img src="image/laptop2.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Asus TUF 2022 F15</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 3000</p>
+                <p class="product-description">The ASUS TUF Gaming F15 (2022) is a battle-ready laptop built for gamers who demand power and durability. Conquer your favorite titles with the latest hardware and a chassis that can withstand the heat of competition.</p>
+            </div>
+        </div>
+
+        <div class="product-container special-color">
+            <a href="https://genshin.hoyoverse.com/en/" target="_blank">
+                <img src="image/laptop3.jpg" alt="Product Image" class="product-image">
+            </a>
+            <div class="product-details">
+                <h2 class="product-name">MSI GF63 Collaboration with Genshin Impact</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p class="product-price">RM4500</p>
+                <p class="product-description">The MSI GF63 Thin is a powerful and affordable gaming laptop that punches above its weight. It's a great choice for gamers who are looking for a balance between performance and portability.</p>
+            </div>
+        </div>        
+    </div>
+    <h2 style="text-align: center; font-size: 50px; font-family: 'Mouse Memoirs'; color: #031273;">Study Laptop</h2>
+    <p style="text-align: center; font-size: 14px; color: black; margin-top: 1px;">Smart tech for a smart budget.</p>
+    <div class="products-container">
+        <div class="product-container">
+            <img src="image/laptop4.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">HP 2023 Plus</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 2500</p>
+                <p class="product-description">The HP 2023 Plus is a more affordable gaming laptop series that is still powerful enough to handle most games. Here are some of the key features of HP Pavilion Gaming laptops:</p>
+            </div>
+        </div>
+    
+        <div class="product-container">
+            <img src="image/laptop5.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Lenovo Thinkpad Laptop</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 1000</p>
+                <p class="product-description">Lenovo ThinkPads are known for their durability, reliability, and excellent keyboards. They are a popular choice for business professionals, students, and anyone who needs a laptop that can handle demanding tasks.</p>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <img src="image/laptop6.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Dell Latitude Pro</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 3500</p>
+                <p class="product-description">Dell Latitude laptops are known for their business-oriented features, durability, and security. They are a popular choice for professionals who need a reliable and secure laptop for work.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 TechHḁven. All rights reserved.</p>
+    </footer>
+</body>
+</html>

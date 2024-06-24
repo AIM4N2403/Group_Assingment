@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+        header {
+            background:#04025f;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header .logo {
+            font-weight: 600;
+            font-size:  19px;
+        }
+        header .contact-info, header .social-icons {
+            display: flex;
+            align-items: center;
+        }
+        header .contact-info span, header .social-icons a {
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            background-color: white;
+            color: white;
+            text-align: center;
+            padding-top: 40px;
+            font-weight: bold;
+            flex-wrap: wrap;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 100px;
+            box-sizing: border-box;
+        }
+        
+        .about-text {
+            flex: 1;
+            max-width: 700px;
+            padding-bottom: 30px;
+            text-align: justify; 
+        }
+        
+        .about-text h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        #myDIV {
+            text-decoration: underline;
+            animation: mymove 5s infinite;
+          }
+          
+          @keyframes mymove {
+            50% {
+              text-decoration-color: yellow;    
+            }
+        }
+        .about-text p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .hero:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+        }
+
+        .about-textt {
+            flex: 1;
+            max-width: 700px;
+            padding-bottom: 30px;
+            text-align: justify; 
+        }
+        
+        .about-textt h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .about-textt p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        
+        
+        footer {
+            background: #04025f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+        }
+
+        audio {
+            display: none;
+        }
+
+        li {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            TechHḁven
+        </div>
+        <div class="contact-info">
+            <span>📞+6011-6368-6713</span>
+            <span>&#128231 techhaven1@gmail.com</span>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="aboutus.html">About Us &#9662;</a>
+            <div class="dropdown-content">
+                <a href="aboutus.html">Us</a>
+                <a href="history.html">History</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="javascript:void(0)">Products &#9662;</a>
+            <div class="dropdown-content">
+                <a href="newrelease.html">New Releases</a>
+                <a href="laptop.html">Laptops</a>
+                <a href="phone.html">Phones</a>
+                <a href="fan.html">Fans</a>
+                <a href="toprated.html">Top Rated</a>
+                <a href="others.html">Others</a>
+            </div>
+        </div>
+        <a href="promotion.html">Super Deals</a>
+        <a href="member.html">Staff in Charge</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact us</a>
+    </nav> 
+    <div class="hero">
+        <img src="companylogo.jpg" alt="Our Company" style="max-width: 500px; margin-right: 40px; align-items: center;">
+        <div class="about-textt">
+            <h2 style="font-size: 30px; font-family: 'Mouse Memoirs'; color: #031273;">Company History </h2>
+            <p>TechHaven isn't just a store; it's a dream realized. In 2017, a spark ignited in Che Muret Bin Ismail's heart - a passion for bringing top-notch electronics to everyone. This passion burned so brightly, it led Che Muret to take a leap of faith, leaving behind the familiar comfort of a day job. It was a bold move, fueled by a belief that exceptional electronics shouldn't be a privilege for a select few.
+                From the humble beginnings of a home office, TechHaven has blossomed into a trusted name for tech enthusiasts across Kedah (our proud home!), Pulau Pinang, and Perlis. Every satisfied customer, every positive interaction, is a testament to the dedication and hard work that has gone into building this haven for all things electronic.
+                <p>But TechHaven's story goes beyond products and sales. We understand the importance of responsible practices, and we're committed to being a force for good in the electronics industry. We believe that cutting-edge technology can go hand-in-hand with a greener tomorrow.
+                Here at TechHaven, we aren't just selling electronics; we're offering a gateway to a world of possibilities.</p><p> We want you to be as excited about the tech you buy as we are about offering it. If you have any questions, if there's a way we can help you find the perfect gadget, or if you simply want to chat about the latest tech trends, please don't hesitate to reach out. We're here, fueled by the same passion that started it all, and ready to connect with you on your tech journey.
+                Welcome to TechHaven, where quality meets passion, and customer service is our heart beat.
+                </p>
+            <p><strong>Sincerely,</strong><br>Che Muret Bin Ismail, CEO of TechHḁven.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 TechHḁven. All rights reserved.</p>
+    </footer>
+</body>
+</html>

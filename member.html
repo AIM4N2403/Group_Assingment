@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/kMVqkVkrp86eSO8d5o0h3a1O5pPT2Ba6wSd8YtE5xgKZR5Epr5YdX7Io1I4XvJ2so2WZv6sPtIMUw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background:#04025f;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header .logo {
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+        header .contact-info, header .social-icons {
+            display: flex;
+            align-items: center;
+        }
+        header .contact-info span, header .social-icons a {
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            position: relative;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .hero {
+           position: relative;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           min-height: 60vh;
+           color: white;
+           text-align: center;
+           padding: 1em;
+           overflow: hidden;
+        }
+        .hero video {
+           position: absolute;
+           top: 1;
+           left: 0;
+           width: 100%;
+           height: 150%;
+           object-fit: cover;
+           z-index: -1;
+        }
+        .hero h1 {
+            font-size: 3em;
+            color: White; 
+            animation: fadeInSlideUp 2s ease-in-out, blink 1.5s step-end infinite alternate;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: Violet;
+            animation: fadeInSlideUp 2s ease-in-out 1s, blink 1.5s step-end infinite alternate;
+        }
+        .content {
+          padding: 20px;
+          display: flex;
+         flex-wrap: wrap;
+         justify-content: flex-end;
+         flex-grow: 1;
+        }
+
+        .members {
+            width: 80%;
+            margin: 5px auto;
+        }
+        .members h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .members .member-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .members .member-item {
+            width: 300px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .members .member-item img {
+            width: 100%;
+            height: 200px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            object-fit: cover;
+        }
+        .members .member-item h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin: 15px 0;
+        }
+        .members .member-item p {
+            font-size: 1em;
+            color: #666;
+            padding: 0 4px 4px;
+        }
+        .members .member-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .members .member-item1 {
+            width: 500px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .members .member-item1 img {
+            width: 100%;
+            height: 200px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            object-fit: cover;
+        }
+        .members .member-item1 h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin: 15px 0;
+        }
+        .members .member-item1 p {
+            font-size: 1em;
+            color: #666;
+            padding: 0 4px 4px;
+        }
+        .members .member-item1:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background:  #04025f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes blink {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            TechHḁven
+        </div>
+        <div class="contact-info">
+            <span>📞+6011-6368-6713</span>
+            <span>&#128231 techhaven1@gmail.com</span>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="aboutus.html">About Us &#9662;</a>
+            <div class="dropdown-content">
+                <a href="aboutus.html">Us</a>
+                <a href="history.html">History</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="javascript:void(0)">Products &#9662;</a>
+            <div class="dropdown-content">
+                <a href="newrelease.html">New Releases</a>
+                <a href="laptop.html">Laptops</a>
+                <a href="phone.html">Phones</a>
+                <a href="fan.html">Fans</a>
+                <a href="toprated.html">Top Rated</a>
+                <a href="others.html">Others</a>
+            </div>
+        </div>
+        <a href="promotion.html">Super Deals</a>
+        <a href="member.html">Staff in Charge</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact us</a>
+    </nav> 
+    <div class="hero">
+        <video autoplay muted loop>
+            <source src="image/vid1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        </div>
+		<center>
+          <button type="button" style="width: 300px; height: 55px; border: none; background: url('pressbutton.gif') no-repeat center center; background-size: cover; cursor: pointer; opacity: 0.6;" onclick="location.href='index.html'"></button>
+        </center>
+    <div class="content">
+        <div class="members">
+            <h2>Staff</h2>
+            <div class="member-items">
+                <div class="member-item">
+                    <img src="image/member1.jpg" alt="Cheif Manager">
+                    <p>Name: Muhammad 'Izzat Bin Che Muret</p>
+                    <p>Student Id: 2022481214</p>
+					<p>Course Code: IML254</p> 
+					<p>Course Name: Introduction to Web Content and Development</p>
+					<p>Group: KCDIM1444A</p>
+					<p>Programme Code: CDIM144 </p>
+				    <p>Faculty: Science, College of Computing, Informatics and Mathemathics </p>
+                </div>
+                <div class="member-item">
+                    <img src="image/member2.jpg" alt="Manager">
+                    <p>Name: Muhammad Afif Aiman Bin Sharom</p>
+					<p>Student Id: 2022466148</p>
+                    <p>Course Code: IML254</p> 
+					<p>Course Name: Introduction to Web Content and Development</p>
+					<p>Group: KCDIM1444A</p>
+					<p>Programme Code: CDIM144</p>
+				    <p>Faculty: Science, College of Computing, Informatics and Mathemathics </p>
+                </div>
+                <div class="member-item">
+                    <img src="image/member3.jpg" alt="Assistance Manager">
+                    <p>Name: Aimad Nurhaqqim Bin Ramli</p>
+                    <p>Student Id: 2022847094</p>
+					<p>Course Code: IML254</p> 
+					<p>Course Name: Introduction to Web Content and Development</p>
+					<p>Group: KCDIM1444A</p>
+					<p>Programme Code: CDIM144 </p>
+				    <p>Faculty: Science, College of Computing, Informatics and Mathemathics </p>
+                </div>
+                <div class="member-item1">
+                    <img src="image/member4.jpg" alt="Store Captain">
+                    <p>Name: Ahmad Syameer Bin Mehad</p>
+                    <p>Student Id: 2022479858</p>
+					<p>Course Code: IML254</p> 
+					<p>Course Name: Introduction to Web Content and Development</p>
+					<p>Group: KCDIM1444A</p>
+					<p>Programme Code: CDIM144 </p>
+				    <p>Faculty: Science, College of Computing, Informatics and Mathemathics </p>
+                </div>
+            </div>
+        </div>
+    </div>
+	<<h2><center style="color: white;">SUBMISSION DATE: WEEK 13</h2></center>
+    <footer>
+        <p>&copy; 2024 TechHaven. All rights reserved.</p>
+    </footer>
+</body>
+</html>

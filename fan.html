@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background:#04025f;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header .logo {
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+        header .contact-info, header .social-icons {
+            display: flex;
+            align-items: center;
+        }
+        header .contact-info span, header .social-icons a {
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .products-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            padding: 100px; 
+        }
+        
+        .centered-container {
+            justify-content: center;
+        }
+
+        .product-container {
+            width: 100%; 
+            max-width: 600px; 
+            padding: 50px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .product-container:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .product-image {
+            width: 100%;
+            height:  500px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease-in-out; 
+        }
+
+        .product-image:hover {
+            transform: translate(0, -10px); 
+        }
+
+        .product-details {
+            margin-top: 20px;
+        }
+        
+        .product-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .product-description {
+            font-size: 16px;
+            color: #999;
+            text-align: justify;
+        }
+
+        .checked {
+            color: orange;
+          
+        }
+
+        footer {
+            background: #04025f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            TechHḁven
+        </div>
+        <div class="contact-info">
+            <span>📞+6011-6368-6713</span>
+            <span>&#128231 techhaven1@gmail.com</span>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="aboutus.html">About Us &#9662;</a>
+            <div class="dropdown-content">
+                <a href="aboutus.html">Us</a>
+                <a href="history.html">History</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="javascript:void(0)">Products &#9662;</a>
+            <div class="dropdown-content">
+                <a href="newrelease.html">New Releases</a>
+                <a href="laptop.html">Laptops</a>
+                <a href="phone.html">Phones</a>
+                <a href="fan.html">Fans</a>
+                <a href="toprated.html">Top Rated</a>
+                <a href="others.html">Others</a>
+            </div>
+        </div>
+        <a href="promotion.html">Super Deals</a>
+        <a href="member.html">Staff in Charge</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact us</a>
+    </nav> 
+    <h2 style="text-align: center; font-size: 60px; font-family: 'Mouse Memoirs'; color: #031273; padding-top: 30px;">Fan  <i class="fa-solid fa-fan"></i></h2>
+    <p style="text-align: center; font-size: 14px; color: black; margin-top: 1px;">Beat the heat, wherever you go.</p>
+    <div class="products-container centered-container">
+        <div class="product-container">
+            <img src="image/fan1.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">XioMi Fan Model 2</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 150</p>
+                <p class="product-description">
+                    The Xiaomi Smart Standing Fan 2 (Model BPLDS02DM) is a popular choice for those looking for a stylish and functional fan for their home..</p>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <img src="image/fan2.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Hulmers Fan</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM 200</p>
+                <p class="product-description">The Hulmers Fan is a modern air circulation fan designed to provide cooling and air movement throughout a room. It appears to be a popular choice in Southeast Asia, particularly in Malaysia.</p>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <img src="image/fan3.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 class="product-name">Laju Mini Clip Fan</h2>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="product-price">RM55</p>
+                <p class="product-description">A mini clip fan is a small, portable fan that attaches to a surface with a clip. They are a popular choice for personal cooling, especially during hot weather.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 TechHḁven. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Products</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background:#04025f;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header .logo {
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+        header .contact-info, header .social-icons {
+            display: flex;
+            align-items: center;
+        }
+        header .contact-info span, header .social-icons a {
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        section{
+            height: 70vh;
+        
+            display: flex;
+        }
+        
+        .s-container{
+            width: 70%;
+            margin: auto;
+        
+            display: flex;
+            align-items: center;
+        }
+        
+        .text-container{
+            flex: 1;
+        
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .text-container h2{
+            font-size: 40px;
+        }
+        
+        .text-container p{
+            color: #474747f4;
+        }
+        
+        .text-container button{
+            all: unset;
+        
+            margin: 0 auto;
+            cursor: pointer;
+            border: 1px solid rgba(50, 50, 50, 0.54);
+            padding: 1rem 4rem;
+            color: black;
+        
+            border-top-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        
+            position: relative;
+            transition: .2s ease-in-out;
+        
+            box-shadow: 5px 5px 0 1px rgba(0, 0, 0, 0.451);
+            overflow: hidden;
+        }
+        
+        .text-container button::after{
+            content: '';
+            position: absolute;
+            inset: 0;
+            width: 0%;
+            background: black;
+            border-top-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            z-index: -1;
+            transform: translate(-100%, 100%);
+        
+            transition: .2s ease-in-out;
+        }
+        
+        .text-container button:hover{
+            color: white;
+        }
+        
+        .text-container button:hover::after{
+            width: 100%;
+            transform: translate(0);
+        }
+        
+        .img-container{
+            max-width: 300px;
+            padding-left: 60px;
+        }
+        
+        .img-container img{
+            width: 100%;
+            object-fit: contain;
+        }
+        .color-selection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            padding-bottom: px;
+        }
+        
+        .color-selection div {
+            width: 70px;
+            height: 60px;
+            cursor: pointer;
+        }
+        
+        .color-selection img {
+            width: 100%;
+            object-fit: contain;
+            height: 100%;
+            transition: .2s ease-in-out;
+        }
+        
+        .color-selection div:hover img {
+            transform: translateY(-20px);
+        }        
+        
+        body.black *{
+            color: white;
+        }
+        
+        body.black header a::after{
+            background: white;
+        }
+        
+        body.black button:hover{
+            color: black;
+        }
+        
+        body.black button:hover::after{
+            background: white;
+        }
+
+        body.blue button{
+            background: rgb(30, 48, 239);
+            color: white;
+        }
+        
+        body.blue button:hover{
+            color: black;
+            background: transparent;
+        }
+        
+        body.blue button{
+            border: none;
+        }
+        
+        body.blue button::after{
+            background: white;
+        }
+        
+        body.blue .text-container p{
+            color: rgb(34,34,34);
+        }
+        
+        
+        @media only screen and (max-width: 768px){
+            section{
+                height: fit-content;
+                text-align: center;
+            }
+        
+            .s-container{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        
+            .img-container{
+                width: 100%;
+                margin: 2rem 0;
+                width: 300px;
+            }
+        }
+        
+        @media only screen and ((min-width: 768px) and (max-width: 1150px)){
+            .s-container{
+                width: 90%;
+            }
+            .text-container{
+                width: 50%;
+            }
+            .img-container{
+                width: 50%;
+            }
+            .img-container img{
+                width: 100%;
+            }
+        }
+        footer {
+            background: #04025f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+            margin-top: auto; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            TechHḁven
+        </div>
+        <div class="contact-info">
+            <span>📞+6011-6368-6713</span>
+            <span>&#128231 techhaven1@gmail.com</span>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="aboutus.html">About Us &#9662;</a>
+            <div class="dropdown-content">
+                <a href="aboutus.html">Us</a>
+                <a href="history.html">History</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="javascript:void(0)">Products &#9662;</a>
+            <div class="dropdown-content">
+                <a href="newrelease.html">New Releases</a>
+                <a href="laptop.html">Laptops</a>
+                <a href="phone.html">Phones</a>
+                <a href="fan.html">Fans</a>
+                <a href="toprated.html">Top Rated</a>
+                <a href="others.html">Others</a>
+            </div>
+        </div>
+        <a href="promotion.html">Super Deals</a>
+        <a href="member.html">Staff in Charge</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact us</a>
+    </nav> 
+    <section>
+        <div class="s-container">
+            <div class="text-container">
+                <h2>
+                    Other Products available in Here !
+                </h2>
+                <p style="text-align: justify;">
+                    Welcome to a world of innovation and efficiency with our range of state-of-the-art electronic products. Whether you're upgrading your home setup, enhancing productivity at work, or seeking the perfect gift, we have something for everyone.
+                </p>                
+                <a href="newrelease.html#bottom"><button>Buy Now!</button></a>
+            </div>
+            <div class="img-container">
+                <img src="image/white.jpg" id="img" alt="">
+            </div>
+        </div>
+    </section>
+    <div class="color-selection">
+        <div>
+            <img src="image/powderblue.jpg" onclick="changeColor('powderblue')" alt="">
+        </div>
+        <div>
+            <img src="image/white.jpg" onclick="changeColor('white')" alt="">
+        </div>
+        <div>
+            <img src="image/blue.jpg" onclick="changeColor('blue')" alt="">
+        </div>
+    </div>  
+    <footer>
+        <p>&copy; 2024 TechHḁven. All rights reserved.</p>
+    </footer>  
+    <script>
+        function changeColor(color){
+            document.body.style.backgroundColor= color
+            let src= 'image/'
+        
+            const img= document.getElementById("img")
+            img.src= src + color + '.jpg'
+        
+            document.body.classList = ""
+            if(color == 'blue'){
+                document.body.classList.add("blue")
+                document.body.style.background= '#7C93C3'
+            }
+            else if(color == 'powderblue'){
+                document.body.classList.add("powderblue")
+            }else{
+                document.body.classList.add("white")
+            }
+        
+        }
+    </script>
+</body>
+</html>
